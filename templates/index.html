@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Progression</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Staff Progression</h1>
+        <button onclick="window.location.href='/view_staff'">View Staff Progress</button>
+        <h2>Add Staff Progress</h2>
+        <form action="/add_staff" method="post">
+            <label>Name: <input type="text" name="name" required></label>
+            <label>Organization: 
+                <select name="organization">
+                    <option>Sri Krishna Adithya College of Arts and Science</option>
+                </select>
+            </label>
+            <label>Coursework: <textarea name="coursework" maxlength="500"></textarea></label>
+            <label>Achievement: <textarea name="achievement" maxlength="500"></textarea></label>
+            <label>Qualification: <textarea name="qualification" maxlength="500"></textarea></label>
+            <label>Current Activity: <textarea name="current_activity" maxlength="500"></textarea></label>
+            <label>Special Mention: <textarea name="special_mention" maxlength="500"></textarea></label>
+            <button type="submit">Add Staff Progress</button>
+        </form>
+    </div>
+</body>
+</html>

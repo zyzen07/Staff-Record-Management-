@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Staff Progress</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>View Staff Progress</h1>
+        <button onclick="window.location.href='/'">Add Staff Progress</button>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Organization</th>
+                <th>Coursework</th>
+                <th>Achievement</th>
+                <th>Qualification</th>
+                <th>Current Activity</th>
+                <th>Special Mention</th>
+                <th>Actions</th>
+            </tr>
+            {% for staff in staff_records %}
+            <tr>
+                <td>{{ staff[0] }}</td>
+                <td>{{ staff[1] }}</td>
+                <td>{{ staff[2] }}</td>
+                <td>{{ staff[3] }}</td>
+                <td>{{ staff[4] }}</td>
+                <td>{{ staff[5] }}</td>
+                <td>{{ staff[6] }}</td>
+                <td>{{ staff[7] }}</td>
+                <td>
+                    <form action="/delete_staff/{{ staff[0] }}" method="get" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
