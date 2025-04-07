@@ -1,2 +1,1 @@
-pip install Flask==2.3.2
-pip install mysql-connector-python==8.3.0
+pip install flask mysql-connector-python
